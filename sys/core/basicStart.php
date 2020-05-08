@@ -3,41 +3,39 @@ ob_start();
 session_start();
 
 
-//SUNUCU YOLUNA GÖRE OLANLAR ÖRN: BASE_DIR
-//GÖRECELİ YOL OLANLAR ÖRN: BASE_RELATIVE_DIR
-
-
-
-
-
-$_SERVER['BASIC_START_DIR'] = str_replace('\\', '/', __DIR__);
-
-define('BASIC_START_DIR', str_replace($_SERVER['DOCUMENT_ROOT'], '', $_SERVER['BASIC_START_DIR']));
-
-
-
 $relativeDir           = '';
 $basicStartRelativeDir = '';
+$explode['phpSelf']    = explode('/', $_SERVER['PHP_SELF']);
 
-$explode['basicStartDir'] = explode('/', BASIC_START_DIR);
-$explode['phpSelf']       = explode('/', $_SERVER['PHP_SELF']);
 
-foreach($explode['basicStartDir'] as $i => $part){
+define('BASIC_START_LOCAL_DIR', str_replace('\\', '/', __DIR__));
+define('BASIC_START_DIR', str_replace($_SERVER['DOCUMENT_ROOT'], '', BASIC_START_LOCAL_DIR));
+
+foreach(explode('/', BASIC_START_DIR) as $i => $part){
     if(!$part){ continue; }
-    if($part === $explode['phpSelf'][$i]){
-        $relativeDir .= "/$part";
-    } /*else{
-        $basicStartRelativeDir .= "/$part";
-    }*/
+    if($part === $explode['phpSelf'][$i]){ $relativeDir .= "/$part";}
+    else{ $basicStartRelativeDir .= "/$part"; }
 }
 
-define('BASE_DIR', substr($relativeDir,1));
-echo BASE_DIR;
+define('BASE_DIR', $relativeDir);
+define('BASIC_START_RELATIVE_DIR', $basicStartRelativeDir);
+define('BASE_LOCAL_DIR', substr(BASIC_START_LOCAL_DIR, 0, -(strlen(BASIC_START_RELATIVE_DIR))));
+
+
+$echo = [
+    'BASIC_START_LOCAL_DIR' => BASIC_START_LOCAL_DIR,
+    'BASIC_START_DIR' => BASIC_START_DIR,
+    'BASIC_START_RELATIVE_DIR' => BASIC_START_RELATIVE_DIR,
+    'BASE_DIR' => BASE_DIR,
+    'BASE_LOCAL_DIR' => BASE_LOCAL_DIR,
+    'SERVER' => $_SERVER
+];
+echo "<pre>".print_r($echo, 1)."</pre>";
 
 
 
 //IMPORT BASIC FUNCTIONS
-require  '~./project/phpBase/sys/lib/php/functions.php';
+require  BASE_LOCAL_DIR.'/sys/lib/php/functions.php';
 
 
 //---- DEFINE ----------------------------------------------------------------------------------------------------------
@@ -64,7 +62,7 @@ $View['call']['html'] = [];
 
 //---- DEFAULT ---------------------------------------------------------------------------------------------------------
 $View['data']['headTitle']    = 'phpBase';
-$View['call']['html']['body'] = BASE_URL . '/sys/_public/html/emptyPage.php';
+$View['call']['html']['body'] = BASE_LOCAL_DIR . '/sys/_public/html/emptyPage.php';
 //---- DEFAULT -------------------------------------------------------------------------------------------------------//
 
 
@@ -76,7 +74,7 @@ function runPage($layout = null){
 
     global $View; extract($View);
 
-    $View['call']['html']['body'] = PAGE_DIR . '/view.php';
+    $View['call']['html']['body'] = BASE_LOCAL_DIR . '/view.php';
 
     require BASE_DIR . "/sys/layout/$layout.php";
     require BASE_DIR . "/sys/core/basicEnd.php";
@@ -88,7 +86,7 @@ function runLayout($layout, $bodyViewSrc = null){
     global $View; extract($View);
 
     if($bodyViewSrc){
-        $View['call']['html']['body'] = BASE_DIR . $bodyViewSrc;
+        $View['call']['html']['body'] = BASE_LOCAL_DIR . $bodyViewSrc;
     }
 
     require BASE_DIR . "/sys/layout/$layout.php";
