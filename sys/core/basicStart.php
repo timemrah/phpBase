@@ -3,13 +3,13 @@ ob_start();
 session_start();
 
 
+//---- CREATE DIR DEFINES ----------------------------------------------------------------------------------------------
+define('BASIC_START_LOCAL_DIR', str_replace('\\', '/', __DIR__));
+define('BASIC_START_DIR', str_replace($_SERVER['DOCUMENT_ROOT'], '', BASIC_START_LOCAL_DIR));
+
 $relativeDir           = '';
 $basicStartRelativeDir = '';
 $explode['phpSelf']    = explode('/', $_SERVER['PHP_SELF']);
-
-
-define('BASIC_START_LOCAL_DIR', str_replace('\\', '/', __DIR__));
-define('BASIC_START_DIR', str_replace($_SERVER['DOCUMENT_ROOT'], '', BASIC_START_LOCAL_DIR));
 
 foreach(explode('/', BASIC_START_DIR) as $i => $part){
     if(!$part){ continue; }
@@ -20,17 +20,9 @@ foreach(explode('/', BASIC_START_DIR) as $i => $part){
 define('BASE_DIR', $relativeDir);
 define('BASIC_START_RELATIVE_DIR', $basicStartRelativeDir);
 define('BASE_LOCAL_DIR', substr(BASIC_START_LOCAL_DIR, 0, -(strlen(BASIC_START_RELATIVE_DIR))));
+define('RUN_RELATIVE_DIR', str_replace(BASE_LOCAL_DIR, '', dirname($_SERVER['SCRIPT_FILENAME'])));
+//---- CREATE DIR DEFINES --------------------------------------------------------------------------------------------//
 
-
-$echo = [
-    'BASIC_START_LOCAL_DIR' => BASIC_START_LOCAL_DIR,
-    'BASIC_START_DIR' => BASIC_START_DIR,
-    'BASIC_START_RELATIVE_DIR' => BASIC_START_RELATIVE_DIR,
-    'BASE_DIR' => BASE_DIR,
-    'BASE_LOCAL_DIR' => BASE_LOCAL_DIR,
-    'SERVER' => $_SERVER
-];
-echo "<pre>".print_r($echo, 1)."</pre>";
 
 
 
@@ -38,26 +30,14 @@ echo "<pre>".print_r($echo, 1)."</pre>";
 require  BASE_LOCAL_DIR.'/sys/lib/php/functions.php';
 
 
-//---- DEFINE ----------------------------------------------------------------------------------------------------------
 
-
-/*define('BASE_URL',  createBaseUrl($_SERVER['DOCUMENT_ROOT'], BASE_DIR));
-define('PAGE_DIR',  pathinfo($_SERVER['SCRIPT_FILENAME'])['dirname']);
-define('BASE_PATH_INFO', getRunningPathInfo($_SERVER['SCRIPT_FILENAME'], BASE_DIR));
-define('PAGE_PATH', BASE_PATH_INFO['dirname']);
-define('PAGE_VIEW_SRC', PAGE_PATH.'/view.php');*/
-
-
-
-//---- DEFINE --------------------------------------------------------------------------------------------------------//
-
+//prePrint(get_defined_constants());
 
 //---- VIEW SETTINGS ---------------------------------------------------------------------------------------------------
 $View = [];
 $View['data'] = [];
 $View['call'] = [];
 $View['call']['html'] = [];
-//---- VIEW SETTINGS -------------------------------------------------------------------------------------------------//
 
 
 //---- DEFAULT ---------------------------------------------------------------------------------------------------------
@@ -76,8 +56,8 @@ function runPage($layout = null){
 
     $View['call']['html']['body'] = BASE_LOCAL_DIR . '/view.php';
 
-    require BASE_DIR . "/sys/layout/$layout.php";
-    require BASE_DIR . "/sys/core/basicEnd.php";
+    require BASE_LOCAL_DIR . "/sys/layout/$layout.php";
+    require BASE_LOCAL_DIR . "/sys/core/basicEnd.php";
 }
 
 
@@ -89,7 +69,7 @@ function runLayout($layout, $bodyViewSrc = null){
         $View['call']['html']['body'] = BASE_LOCAL_DIR . $bodyViewSrc;
     }
 
-    require BASE_DIR . "/sys/layout/$layout.php";
-    require BASE_DIR . "/sys/core/basicEnd.php";
+    require BASE_LOCAL_DIR . "/sys/layout/$layout.php";
+    require BASE_LOCAL_DIR . "/sys/core/basicEnd.php";
 }
 //---- RUN SYSTEM ----------------------------------------------------------------------------------------------------//

@@ -4,4 +4,4 @@
 
 
 //runPage('_public');
-runLayout('_public', PAGE_VIEW_SRC);
+runLayout('_public', RUN_RELATIVE_DIR.'/view.php');
