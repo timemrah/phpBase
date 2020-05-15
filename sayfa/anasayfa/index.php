@@ -4,4 +4,4 @@
 
 
 //runPage('_public');
-runLayout('_public', RUN_RELATIVE_DIR.'/view.php');
+runLayout('_public', RUN__HOST_BR_DIR.'/view.php');
