@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?=$data['headTitle']?></title>
     <base href="<?=BASE__HOST_DIR.'/'?>">
-
+    <link rel="icon" type="image/png" href="file/img/logo-64.png" itemprop="thumbnailUrl"/>
 
     <!-- IMPORT CSS -->
     <? require RUN_LAYOUT__SERVER_DIR . '/importCss.php' ?>

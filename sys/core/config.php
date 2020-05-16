@@ -4,10 +4,11 @@ return [
     'session' => true,
 
     'database' => [
-        'host' => 'localhost',
-        'user' => 'root',
-        'pass' => '',
-        'dbname' => '',
-        'charset' => 'utf8'
+        'host'       => 'localhost',
+        'user'       => 'root',
+        'pass'       => '',
+        'dbname'     => 'basephp',
+        'charset'    => 'utf8',
+        'persistent' => false
     ]
 ];

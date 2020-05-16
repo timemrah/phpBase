@@ -24,10 +24,17 @@ define('RUN__HOST_BR_DIR', str_replace(BASE__SERVER_DIR, '', dirname($_SERVER['S
 //---- CREATE DIR DEFINES --------------------------------------------------------------------------------------------//
 
 
+//DEFINES
+define('CONFIG', require BASE__SERVER_DIR . '/sys/core/config.php');
+
+
 //IMPORT BASIC FUNCTIONS
-require  BASE__SERVER_DIR . '/sys/lib/php/tools.php';
+require BASE__SERVER_DIR . '/sys/core/tools.php';
 require BASE__SERVER_DIR . '/sys/core/functions.php';
-require BASE__SERVER_DIR . '/sys/lib/php/class/Html.php';
+require BASE__SERVER_DIR . '/sys/core/Html.php';
+require BASE__SERVER_DIR . '/sys/core/Mysql.php';
+require BASE__SERVER_DIR . '/sys/core/Model.php';
+require BASE__SERVER_DIR . '/sys/core/getModel.php';
 
 
 //---- VIEW SETTINGS ---------------------------------------------------------------------------------------------------
