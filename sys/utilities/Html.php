@@ -5,12 +5,12 @@ class Html
 {
 
     static function isActive($value1, $value2){
-        return ($value1 === $value1) ? 'active' : '';
+        return ($value1 === $value2) ? 'active' : '';
     }
 
 
     static function isSelect($value1, $value2){
-        return ($value1 === $value1) ? 'selected' : '';
+        return ($value1 === $value2) ? 'selected' : '';
     }
 
 

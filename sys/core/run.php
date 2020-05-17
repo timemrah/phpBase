@@ -12,9 +12,7 @@ class run{
     static function byLayout($layout, $mainView = null){
 
         global $View; extract($View);
-
-        define('RUN_LAYOUT', $layout);
-        define('RUN_LAYOUT__SERVER_DIR', BASE__SERVER_DIR . "/layout/$layout");
+        self::setRunLayoutDefines($layout, '/layout', BASE__SERVER_DIR . "/layout/$layout");
 
         //SET HTML of MAIN VIEW
         if($mainView){
@@ -43,9 +41,7 @@ class run{
     static function withoutLayout($mainView = null){
 
         global $View; extract($View);
-
-        define('RUN_LAYOUT', null);
-        define('RUN_LAYOUT__SERVER_DIR', null);
+        self::setRunLayoutDefines();
 
         //SET HTML of MAIN VIEW
         if($mainView){
@@ -62,9 +58,17 @@ class run{
 
 
     static function noView(){
-        define('RUN_LAYOUT', null);
-        define('RUN_LAYOUT__SERVER_DIR', null);
+        self::setRunLayoutDefines();
         require BASE__SERVER_DIR . "/sys/core/end.php";
+    }
+
+
+
+
+    private static function setRunLayoutDefines($filename = null, $hostDir = null, $serverDir = null){
+        define('RUN_LAYOUT__FILENAME', $filename);
+        define('RUN_LAYOUT__HOST_DIR', $hostDir);
+        define('RUN_LAYOUT__SERVER_DIR', $serverDir);
     }
 
 

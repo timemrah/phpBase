@@ -12,10 +12,10 @@
         <div class="collapse navbar-collapse" id="navbarsExample09">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="sayfa/anasayfa">Anasayfa</a>
+                    <a class="nav-link <?=Html::isActive('sayfa/anasayfa', RUN__HOST_BR_DIR)?>" href="sayfa/anasayfa">Anasayfa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sayfa/nedir">Nedir?</a>
+                    <a class="nav-link <?=Html::isActive('sayfa/nedir', RUN__HOST_BR_DIR)?>" href="sayfa/nedir">Nedir?</a>
                 </li>
                 <? /*<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown"
@@ -39,10 +39,10 @@
                     </form>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sayfa/yeni-uye"><i class="fas fa-user-plus"></i> Yeni Üye</a>
+                    <a class="nav-link <?=Html::isActive('sayfa/yeni-uye', RUN__HOST_BR_DIR)?>" href="sayfa/yeni-uye"><i class="fas fa-user-plus"></i> Yeni Üye</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sayfa/giris"><i class="fas fa-sign-in-alt"></i> Giriş</a>
+                    <a class="nav-link <?=Html::isActive('sayfa/giris', RUN__HOST_BR_DIR)?>" href="sayfa/giris"><i class="fas fa-sign-in-alt"></i> Giriş</a>
                 </li>
             </ul>
         </div>
