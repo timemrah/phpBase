@@ -14,11 +14,15 @@ class User extends \sys\core\Model
 
 
     function getUser($userId){
-        return $this->db->row("SELECT * FROM users WHERE ID=:userId",['userId' => $userId]);
+        return $this->getRow('SELECT * FROM users WHERE ID=:userId', [
+            'userId' => $userId
+        ]);
     }
 
 
     function getUsers($piece = null, $page = null, $cols = '*', $orderBy = ''){
-        return $this->db->row("SELECT {$cols} FROM users {$orderBy}");
+        return $this->getRows("SELECT {$cols} FROM users {$orderBy}");
     }
+
+
 }

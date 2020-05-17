@@ -5,7 +5,7 @@
  * Date: 17.02.2019
  * Time: 02:52
  */
-namespace sys\core;
+namespace sys\utilities;
 
 
 class Mysql

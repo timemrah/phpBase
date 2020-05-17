@@ -1,0 +1,6 @@
+#main{ height: 100%; }
+#main > .container{height: 100%; display: flex;}
+#main > .container > div{ margin: auto; text-align: center; }
+#main > .container > div h1{ margin-bottom: 3rem; color: #999; }
+#main > .container > div .icon{ color: #CCC; margin-bottom: 1rem; }
+.lead{ font-size: 26px; color: #999; }

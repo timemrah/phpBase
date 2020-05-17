@@ -1,0 +1,12 @@
+body{  }
+#main{ height: 100%; }
+#main > .container{height: 100%; display: flex;}
+#login-form{ width: 330px; margin: auto; }
+#login-form .input-group-text{ width: 55px;}
+#login-form .input-group-text svg{ margin: auto; }
+
+#username-wrapper .input-group-text{ border-bottom-left-radius: 0; border-bottom-width: 0;  }
+#username-wrapper input{ border-bottom-right-radius: 0; border-bottom-width: 0; }
+
+#password-wrapper .input-group-text{ border-top-left-radius: 0;  }
+#password-wrapper input{ border-top-right-radius: 0; }

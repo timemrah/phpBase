@@ -1,14 +1,18 @@
-<?php
-return [
+<?php return [
+
 
     'session' => true,
 
-    'database' => [
-        'host'       => 'localhost',
-        'user'       => 'root',
-        'pass'       => '',
-        'dbname'     => 'basephp',
-        'charset'    => 'utf8',
-        'persistent' => false
+
+    'dbProfiles' => [
+        [   'host'       => 'localhost',
+            'user'       => 'root',
+            'pass'       => '',
+            'dbname'     => 'basephp',
+            'charset'    => 'utf8',
+            'persistent' => false
+        ]
     ]
+
+
 ];

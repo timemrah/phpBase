@@ -5,7 +5,7 @@ PHP tabanlı fonksiyonel hızlı site geliştirme proje ortamıdır.
 ## Core Dosyaları
 
 
-- #### sys/core/basicStart.php
+- #### sys/core/start.php
   Her çalışacak sayfanın başlangıcını oluşturur ve uygulamayı ayağa kaldırır.
   
   Bu işlemler;
@@ -17,17 +17,17 @@ PHP tabanlı fonksiyonel hızlı site geliştirme proje ortamıdır.
   gibidir.
   
   
-- #### sys/core/basicEnd.php
+- #### sys/core/end.php
   Her isteğin sonunda sistemi sonlandıran kodları barındırır.
   
   
 ## Sabitler
 - #### BASIC_START__SERVER_DIR
-  basicStart.php dosyasının sunucu klasör yoludur.
+  start.php dosyasının sunucu klasör yoludur.
 - #### BASIC_START__HOST_DIR
-  basicStart.php dosyasının host klasör yoludur.
+  start.php dosyasının host klasör yoludur.
 - #### BASIC_START__HOST_BR_DIR
-  basicStart.php dosyasının host klasörüne göreceli klasör yoludur.
+  start.php dosyasının host klasörüne göreceli klasör yoludur.
 - #### BASE__SERVER_DIR
   Projenin çalıştığı sunucu klasör yoludur.
 - #### BASE__HOST_DIR

@@ -1,14 +1,23 @@
-<form>
-    <div class="input-group">
-        <div class="input-group-prepend">
-            <span class="input-group-text"></span>
+<div class="container">
+
+
+    <form id="login-form" action="" method="post">
+        <div id="username-wrapper" class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input id="emailInput" class="form-control" type="email" placeholder="Kullanıcı Adı" required autofocus />
         </div>
-        <input type="text" name="username" placeholder="Kullanıcı Adı" />
-    </div>
-    <div class="input-group">
-        <div class="input-group-prepend">
-            <span class="input-group-text"></span>
+        <div id="password-wrapper" class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input id="passwordInput" class="form-control" type="password" placeholder="Şifre" required />
         </div>
-        <input type="password" name="password" placeholder="Şifre" />
-    </div>
-</form>
+        <div class="mt-2">
+            <button class="btn btn-success btn-lg btn-block">Giriş</button>
+        </div>
+    </form>
+
+
+</div>

@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?=$data['headTitle']?></title>
-    <base href="<?=BASE__HOST_DIR.'/'?>">
+    <base href="<?=BASE__HOST_DIR . '/'?>">
     <link rel="icon" type="image/png" href="file/img/logo-64.png" itemprop="thumbnailUrl"/>
 
     <!-- IMPORT CSS -->

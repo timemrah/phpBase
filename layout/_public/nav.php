@@ -11,8 +11,11 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample09">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="sayfa/nedir">Nedir? <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="sayfa/anasayfa">Anasayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sayfa/nedir">Nedir?</a>
                 </li>
                 <? /*<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown"
@@ -24,14 +27,24 @@
                     </div>
                 </li>*/ ?>
             </ul>
-            <form id="search-form" class="form-inline my-2 my-md-0" action="" method="get">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Ara" aria-label="Search">
-                    <div class="input-group-append">
-                        <button class="btn"><i class="fas fa-search"></i></button>
-                    </div>
-                </div>
-            </form>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-3">
+                    <form id="search-form" class="form-inline my-2 my-md-0" action="" method="get">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button class="btn"><i class="fas fa-search"></i></button>
+                            </div>
+                            <input class="form-control" type="text" placeholder="Ara" aria-label="Search">
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sayfa/yeni-uye"><i class="fas fa-user-plus"></i> Yeni Üye</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sayfa/giris"><i class="fas fa-sign-in-alt"></i> Giriş</a>
+                </li>
+            </ul>
         </div>
     </nav>
 </div>
