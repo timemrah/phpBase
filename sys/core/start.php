@@ -41,6 +41,7 @@ define('CONFIG', require BASE__SERVER_DIR . '/sys/core/config.php');
 
 //IMPORT BASIC FUNCTIONS
 require BASE__SERVER_DIR . '/sys/core/tool.php';
+require BASE__SERVER_DIR . '/sys/utilities/Stack.php';
 require BASE__SERVER_DIR . '/sys/utilities/Html.php';
 require BASE__SERVER_DIR . '/sys/core/instanceModel.php';
 require BASE__SERVER_DIR . '/sys/core/run.php';

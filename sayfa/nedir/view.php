@@ -59,6 +59,4 @@
 </code></pre></li>
     </ul>
     <h2 id="devami-eklenecekti-r-">DEVAMI EKLENECEKTİR...</h2>
-
-
 </div>

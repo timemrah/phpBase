@@ -1,7 +1,4 @@
 <?php
-namespace sys\core;
-
-
 
 
 class instanceModel

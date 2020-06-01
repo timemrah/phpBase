@@ -1,5 +1,4 @@
-<?php
-namespace sys\core;
+<?php namespace model;
 
 
 class Model

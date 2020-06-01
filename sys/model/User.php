@@ -1,10 +1,7 @@
-<?php
-namespace model;
+<?php namespace model;
 
 
-
-
-class User extends \sys\core\Model
+class User extends Model
 {
 
     function __construct()

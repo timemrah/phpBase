@@ -56,3 +56,21 @@ function getConstants(){
         'RUN_LAYOUT__SERVER_DIR' => RUN_LAYOUT__SERVER_DIR
     ];
 }
+
+
+
+
+function accessByDot($keys, $array = []){
+
+    $keyParts = explode('.', $keys);
+    $delegate = &$array;
+
+    foreach($keyParts as $key){
+        if(isset($delegate[$key])){
+            $delegate = &$delegate[$key];
+            continue;
+        } else{ trigger_error('Undefined Key', E_USER_ERROR); }
+    }
+
+    return $delegate;
+}
