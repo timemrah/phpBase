@@ -5,7 +5,7 @@ $userModel = instanceModel::User();
 $user = $userModel->getUser(1);
 
 
-$member = new Stack([
+$View['member'] = new Stack([
     "ad"    => "Emrah",
     "soyad" => "Tunçel",
     "cocuk" => [
@@ -16,9 +16,7 @@ $member = new Stack([
     ]
 ]);
 
-
-echo $member->get("cocuk.0.soyad");
-
+$View['member']->set('deneme', 'Veri');
 
 
 run::byLayout('_public');

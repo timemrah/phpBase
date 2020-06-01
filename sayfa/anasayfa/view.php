@@ -6,3 +6,10 @@
         </p>
     </div>
 </div>
+
+
+<?php
+
+prePrint($member);
+
+?>

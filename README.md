@@ -1,5 +1,5 @@
 # PHP BASE NEDİR?
-PHP tabanlı fonksiyonel hızlı site geliştirme proje ortamıdır.
+PHP tabanlı, hızlı, fonksiyonel site geliştirme proje ortamıdır.
 
 
 ## Core Dosyaları
@@ -62,4 +62,4 @@ PHP tabanlı fonksiyonel hızlı site geliştirme proje ortamıdır.
       //İki değer doğruysa 'selected' değerini döndürür.  
       
       
-##DEVAMI EKLENECEKTİR...
+## DEVAMI EKLENECEKTİR...
