@@ -27,8 +27,11 @@ class Stack
                 $delegate = &$delegate[$key];
                 continue;
             } else{
-                $delegate[$key] = [];
-                $delegate = &$delegate[$key];
+                if($key === ''){
+                    $delegate = &$delegate[];
+                } else{
+                    $delegate = &$delegate[$key];
+                }
             }
         }
 
@@ -39,7 +42,7 @@ class Stack
 
 
 
-    function get($keys){
+    public function get($keys){
 
         $keyParts = explode('.', $keys);
         $delegate = $this->data;
@@ -48,10 +51,56 @@ class Stack
             if(isset($delegate[$key])){
                 $delegate = $delegate[$key];
                 continue;
-            } else{ trigger_error('Undefined Key', E_USER_ERROR); }
+            } else{
+                trigger_error('Undefined Key', E_USER_ERROR);
+            }
         }
 
         return $delegate;
     }
+
+
+
+
+    public function isSet($keys){
+        $keyParts = explode('.', $keys);
+        $delegate = $this->data;
+
+        foreach($keyParts as $key){
+            if(isset($delegate[$key])){
+                $delegate = $delegate[$key];
+                continue;
+            } else{
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+
+
+
+    public function isGet($keys){
+        $keyParts = explode('.', $keys);
+        $delegate = $this->data;
+
+        foreach($keyParts as $key){
+            if(isset($delegate[$key])){
+                $delegate = $delegate[$key];
+                continue;
+            } else{ return null; }
+        }
+
+        return $delegate;
+    }
+
+
+
+
+    public function getData(){
+        return $this->data;
+    }
+
 
 }
