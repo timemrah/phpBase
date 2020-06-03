@@ -1,4 +1,3 @@
-body{  }
 #main{ height: 100%; }
 #main > .container{height: 100%; display: flex;}
 #login-form{ width: 330px; margin: auto; }

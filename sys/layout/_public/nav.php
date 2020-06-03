@@ -38,12 +38,22 @@
                         </div>
                     </form>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link <?=Html::isActive('sayfa/yeni-uye', RUN__HOST_BR_DIR)?>" href="sayfa/yeni-uye"><i class="fas fa-user-plus"></i> Yeni Üye</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link <?=Html::isActive('sayfa/giris', RUN__HOST_BR_DIR)?>" href="sayfa/giris"><i class="fas fa-sign-in-alt"></i> Giriş</a>
-                </li>
+                <? if(!empty($_SESSION)){ ?>
+                    <li class="nav-item">
+                        <a class="nav-link <?=Html::isActive('kontrol-panel/anasayfa', RUN__HOST_BR_DIR)?>" href="kontrol-panel/anasayfa"><i class="fas fa-user-plus"></i> Kontrol Panel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?=Html::isActive('sayfa/cikis', RUN__HOST_BR_DIR)?>" href="sayfa/cikis"><i class="fas fa-sign-in-alt"></i> Çıkış</a>
+                    </li>
+                <? } else{ ?>
+                    <li class="nav-item">
+                        <a class="nav-link <?=Html::isActive('sayfa/yeni-uye', RUN__HOST_BR_DIR)?>" href="sayfa/yeni-uye"><i class="fas fa-user-plus"></i> Yeni Üye</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?=Html::isActive('sayfa/giris/form', RUN__HOST_BR_DIR)?>" href="sayfa/giris/form"><i class="fas fa-sign-in-alt"></i> Giriş</a>
+                    </li>
+                <? } ?>
+
             </ul>
         </div>
     </nav>

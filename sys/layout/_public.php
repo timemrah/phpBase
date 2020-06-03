@@ -17,6 +17,9 @@
 </head>
 <body class="d-flex flex-column h-100">
 
+<!-- awAlert -->
+<? require BASE__SERVER_DIR . '/sys/_public/html/awAlert.php' ?>
+<!-- awAlert -->
 
 <!-- HEADER -->
 <header id="header">

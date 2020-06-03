@@ -1,0 +1,51 @@
+pre{ background-color: #EEE; padding: 15px; border: 1px solid rgba(0,0,0,0.1); border-radius: 5px; }
+
+
+/* awPN *|**/
+#page-notice-area{
+    position: fixed; top: 20%; left: 0; background-color: rgba(0,0,0,0.9); color: #FFF; width: 100%;
+    border-radius: 0; display: none; z-index: 9999;
+}
+#page-notice-area a{ color: #00bbff; }
+#page-notice-area .table{ display: table; margin-bottom: 0; background-color: transparent !important; border: 0 !important; }
+#page-notice-area .td{ display: table-cell; vertical-align: middle; text-align: center; padding: 45px; }
+#page-notice-area .icon-fr{}
+#page-notice-area .icon-fr .icon{ font-size: 50px; line-height: 0px; margin-bottom: 15px; margin-top: 15px; display: none; width: auto; }
+#page-notice-area .icon-fr .load{ margin: 16px auto 16px auto; }
+#page-notice-area .icon-fr .info i{
+    background: radial-gradient(ellipse at center, #FFF 0%,#FFF 60%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%);
+    color: #3498DB;
+}
+#page-notice-area .icon-fr .success i{ color: #65BD24; }
+#page-notice-area .icon-fr .warning i{
+    background: radial-gradient(ellipse at center, #FFF 0%,#FFF 60%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%);
+    color: #BFA822;
+}
+#page-notice-area .icon-fr .error i{ color: #ff6a6a; }
+#page-notice-area .body{ font-size: 16px; line-height: 16px; margin-bottom: 15px; margin-top: 15px; color: #FFF; }
+#page-notice-area .btn-fr{ display: none; }
+#page-notice-area .btn-fr button{
+    margin-top: 40px; margin-bottom: 0px; display: block;
+    margin-left: auto; margin-right: auto; padding: 5px 30px; transition-duration: 0.2s;
+    background-color: transparent; color: #FFF; border: 2px solid #FFF; outline: 0;
+}
+#page-notice-area .btn-fr button:hover{ background-color: rgba(0,0,0,0.2); }
+#page-notice-area .btn-close{ cursor: pointer; position: absolute; right: 10px; top: 10px; }
+.loading-effect{ border: 6px solid rgba(255,255,255,0.1); border-radius: 50%;
+    width: 48px !important; height: 48px; border-top: 6px double #fff;
+    animation: spin 1s linear infinite;
+    /*border-bottom: 6px solid #3498db;
+    animation: spin 1.5s ease-in-out infinite*/
+}
+.loading-effect-2{
+    border: 6px solid rgba(0,0,0,0.1); border-radius: 50%; width: 48px;
+    height: 48px; border-top: 6px double rgba(0,0,0,0.8); /*border-bottom: 6px solid #3498db;*/
+    animation: spin 1s linear infinite;
+    position: absolute; left: calc(50% - 24px); top: calc(50% - 24px);
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); scale(1); }
+    /*50% { transform: rotate(180deg); scale(1.5); }*/
+    100% { transform: rotate(360deg); scale(1); }
+}
+/* awPN */

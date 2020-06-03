@@ -10,9 +10,16 @@ class User extends Model
     }
 
 
-    function getUser($userId){
-        return $this->getRow('SELECT * FROM users WHERE ID=:userId', [
+    function getUser($userId, $cols = '*'){
+        return $this->getRow("SELECT {$cols} FROM users WHERE ID=:userId", [
             'userId' => $userId
+        ]);
+    }
+
+
+    function getUserByUsername($username, $cols = '*'){
+        return $this->getRow("SELECT {$cols} FROM users WHERE USERNAME=:username", [
+            'username' => $username
         ]);
     }
 

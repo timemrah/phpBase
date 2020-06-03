@@ -4,16 +4,14 @@
 
 
 function prePrint($value){
-    echo '<pre style="background: #fcb6d5; padding: 15px; border: 2px solid rgba(0,0,0,0.2);">' .print_r($value, 1).'</pre>';
+    echo "<pre>" . print_r($value, 1) . "</pre>";
 }
 
 
 
 
 function preDump($value){
-    echo '<pre style="background: #fcb6d5; padding: 15px; border: 2px solid rgba(0,0,0,0.2);">';
     var_dump($value);
-    echo '</pre>';
 }
 
 
@@ -26,14 +24,6 @@ function dir2Url($dir){
 
 
 
-function res($status, $msg = null, $code = null, $data = null){
-    return [
-        'status' => $status,
-        'code'   => $code,
-        'msg'    => $msg,
-        'data'   => $data
-    ];
-}
 function resTrue($msg = null, $code = null, $data = null){
     return [
         'status' => true,
@@ -54,21 +44,23 @@ function resFalse($msg = null, $code = null, $data = null){
 
 
 
-function ajaxResTrue($msg = null, $code = null, $data = null){
+function jsonEchoTrue($msg = null, $code = null, $data = null){
     echo json_encode([
         'status' => true,
         'code'   => $code,
         'msg'    => $msg,
         'data'   => $data
     ]);
+    return true;
 }
-function ajaxResFalse($msg = null, $code = null, $data = null){
+function jsonEchoFalse($msg = null, $code = null, $data = null){
     echo json_encode([
         'status' => false,
         'code'   => $code,
         'msg'    => $msg,
         'data'   => $data
     ]);
+    return false;
 }
 
 
@@ -81,6 +73,18 @@ function GET_PositiveInt($keys, $default = 1){
 function POST_PositiveInt($keys, $default = 1){
 
 }
+
+
+
+function direct($url, $outer = false){
+    if($outer === false){
+        header('Location: ' . BASE__HOST_DIR . $url);
+    } else{
+        header('Location: ' . $url);
+    }
+}
+
+
 
 
 function getConstants(){

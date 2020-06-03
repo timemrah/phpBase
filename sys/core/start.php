@@ -1,4 +1,19 @@
 <?php
+//---- GLOBAL VARIABLES ------------------------------------------------------------------------------------------------
+$View = [];
+$View['data'] = [];
+$View['call'] = [];
+$View['call']['html'] = [];
+$View['call']['css']  = [];
+$View['call']['js']   = [];
+
+
+//START PROCESS TIME RECORD
+$startTime = microtime(1);
+$View['data']['startTime'] = $startTime;
+
+
+//OB START
 ob_start();
 
 
@@ -44,20 +59,12 @@ require BASE__SERVER_DIR . '/sys/core/tool.php';
 require BASE__SERVER_DIR . '/sys/utilities/Stack.php';
 require BASE__SERVER_DIR . '/sys/utilities/Html.php';
 require BASE__SERVER_DIR . '/sys/core/instanceModel.php';
-require BASE__SERVER_DIR . '/sys/core/run.php';
+require BASE__SERVER_DIR . '/sys/core/Run.php';
 
 
 //SESSION START
 if(CONFIG['session']){ session_start(); }
 
-//prePrint($_SERVER);
-//---- VIEW VARIABLES---------------------------------------------------------------------------------------------------
-$View = [];
-$View['data'] = [];
-$View['call'] = [];
-$View['call']['html'] = [];
-$View['call']['css']  = [];
-$View['call']['js']   = [];
 
 //---- VIEW DEFAULT ----------------------------------------------------------------------------------------------------
 $View['data']['headTitle']    = 'phpBase';

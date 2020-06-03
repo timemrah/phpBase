@@ -1,2 +1,1 @@
-ErrorDocument 404 http://localhost/project/phpBase/sayfa/404/
 ErrorDocument 500 http://localhost/project/phpBase/sayfa/500/

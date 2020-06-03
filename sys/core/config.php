@@ -12,7 +12,10 @@
             'charset'    => 'utf8',
             'persistent' => false
         ]
-    ]
+    ],
+
+
+    'defaultLayout' => '_public'
 
 
 ];

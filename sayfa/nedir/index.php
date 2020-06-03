@@ -1,4 +1,4 @@
 <?php require '../../sys/core/start.php';
 
 
-run::byLayout('_public');
+Run::byLayout('_public');

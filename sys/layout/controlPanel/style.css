@@ -1,0 +1,10 @@
+#header{ margin-bottom: 3rem; }
+#header .navbar-brand img{
+    height: 40px; line-height: 0; border-radius: 10%; margin-top: -10px; margin-bottom: -6px; margin-right: .25rem;
+}
+#search-form .input-group-prepend > .btn{
+    color: #ced4da; border: solid #ced4da; border-width: 1px 0px 1px 1px; transition-duration: .2s;
+    padding-left: 10px; padding-right: 10px;
+}
+#search-form .input-group-prepend > .btn:hover{ color: #FFF; background-color: #ced4da; }
+#search-form input{ border-left: 0; padding-left: 3px; }
