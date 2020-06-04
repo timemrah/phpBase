@@ -1,6 +1,5 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="" title="Anasayfa">
+    <a class="navbar-brand" href="kontrol-panel/anasayfa/" title="Anasayfa">
         <img src="file/img/logo-64.png"/>
         BasePHP
     </a>
@@ -33,9 +32,14 @@
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="sayfa/cikis">
-                    Çıkış <i class="fas fa-sign-in-alt"></i>
+                <a class="nav-link" href="sayfa/anasayfa">
+                    Siteye Dön
                 </a>
+            </li>
+            <li class="nav-item">
+                <span id="logout-btn" class="nav-link">
+                    Çıkış <i class="fas fa-sign-in-alt"></i>
+                </span>
             </li>
         </ul>
     </div>

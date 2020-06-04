@@ -43,7 +43,7 @@
                         <a class="nav-link <?=Html::isActive('kontrol-panel/anasayfa', RUN__HOST_BR_DIR)?>" href="kontrol-panel/anasayfa"><i class="fas fa-user-plus"></i> Kontrol Panel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?=Html::isActive('sayfa/cikis', RUN__HOST_BR_DIR)?>" href="sayfa/cikis"><i class="fas fa-sign-in-alt"></i> Çıkış</a>
+                        <span id="logout-btn" class="nav-link <?=Html::isActive('sayfa/cikis', RUN__HOST_BR_DIR)?>"><i class="fas fa-sign-in-alt"></i> Çıkış</span>
                     </li>
                 <? } else{ ?>
                     <li class="nav-item">

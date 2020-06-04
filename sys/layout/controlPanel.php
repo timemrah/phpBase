@@ -20,6 +20,9 @@
 <!-- awAlert -->
 <? require BASE__SERVER_DIR . '/sys/_public/html/awAlert.php' ?>
 <!-- awAlert -->
+<!-- confirmModal -->
+<? require BASE__SERVER_DIR . '/sys/_public/html/confirmModal.php' ?>
+<!-- confirmModal -->
 
 <!-- HEADER -->
 <header id="header">
