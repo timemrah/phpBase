@@ -25,9 +25,10 @@ if($user['PASSWORD'] !== $password){
     return jsonEchoFalse('Şifre yanlış.', 'wrongPassword');
 }
 
-$_SESSION['id'] = $user['ID'];
-$_SESSION['name'] = $user['_NAME_'];
+$_SESSION['id']      = $user['ID'];
+$_SESSION['name']    = $user['_NAME_'];
 $_SESSION['surname'] = $user['SURNAME'];
+$_SESSION['email']   = $user['EMAIL'];
 
 jsonEchoTrue('Giriş başarılı', 'success');
 Run::noView();

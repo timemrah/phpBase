@@ -1,6 +1,9 @@
 <?php return [
 
 
+    'projectTitle' => 'phpBase',
+
+
     'session' => true,
 
 

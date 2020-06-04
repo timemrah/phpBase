@@ -13,9 +13,8 @@
     <? require RUN_LAYOUT__SERVER_DIR . '/importCss.php' ?>
     <!-- /IMPORT CSS -->
 
-
 </head>
-<body class="d-flex flex-column h-100">
+<body>
 
 <!-- awAlert -->
 <? require BASE__SERVER_DIR . '/sys/_public/html/awAlert.php' ?>
@@ -24,25 +23,44 @@
 <? require BASE__SERVER_DIR . '/sys/_public/html/confirmModal.php' ?>
 <!-- confirmModal -->
 
-<!-- HEADER -->
-<header id="header">
-    <? require RUN_LAYOUT__SERVER_DIR . '/nav.php' ?>
-</header>
-<!-- /HEADER -->
+<div class="wrapper">
 
 
-<!-- MAIN -->
-<main id="main">
-    <? require $View['call']['html']['main']; ?>
-</main>
-<!-- /MAIN -->
+    <!-- SIDEBAR -->
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="sys/vendor/material-dashboard-master/assets/img/sidebar-1.jpg">
+        <? require RUN_LAYOUT__SERVER_DIR . '/sideBar.php' ?>
+    </div>
+    <!-- /SIDEBAR -->
 
 
-<!-- FOOTER -->
-<footer id="footer" class="mt-auto py-3">
-    <? require RUN_LAYOUT__SERVER_DIR . '/footer.php' ?>
-</footer>
-<!-- /FOOTER -->
+    <!-- MAIN PANEL -->
+    <div class="main-panel">
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top">
+            <? require RUN_LAYOUT__SERVER_DIR . '/navbar.php' ?>
+        </nav>
+        <!-- /NAVBAR -->
+
+        <!-- CONTENT -->
+        <div class="content">
+            <? require $View['call']['html']['main']; ?>
+        </div>
+        <!-- /CONTENT -->
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <? require RUN_LAYOUT__SERVER_DIR . '/footer.php' ?>
+        </footer>
+        <!-- /FOOTER -->
+
+    </div>
+    <!-- /MAIN PANEL -->
+
+
+</div>
+
+
 
 
 <!-- IMPORT JS -->

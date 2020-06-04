@@ -67,5 +67,5 @@ if(CONFIG['session']){ session_start(); }
 
 
 //---- VIEW DEFAULT ----------------------------------------------------------------------------------------------------
-$View['data']['headTitle']    = 'phpBase';
+$View['data']['headTitle']    = CONFIG['projectTitle'];
 $View['call']['html']['main'] = BASE__SERVER_DIR . '/sys/_public/html/emptyPage.php';
