@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
     <div class="card">
-        <div class="card-header card-header-primary">
+        <div class="card-header card-header-success">
             <h4 class="card-title">Profil Bilgilerim</h4>
             <!--<p class="card-category">Complete your profile</p>-->
         </div>
@@ -55,20 +55,17 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-
                         <div class="form-group">
-                            <label>Hakkımda</label>
-                            <!--<label class="bmd-label-floating"></label>-->
+                            <label class="bmd-label-floating">Hakkımda</label>
                             <textarea class="form-control" rows="3"></textarea>
                         </div>
-
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary pull-right">Güncelle</button>
+                <button type="submit" class="btn btn-success pull-right">Güncelle</button>
                 <div class="clearfix"></div>
             </form>
         </div>
-
+    </div>
 
 
 </div>

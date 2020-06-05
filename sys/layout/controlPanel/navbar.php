@@ -50,7 +50,7 @@
                     <p class="d-lg-none d-md-block"><?="$_SESSION[name] $_SESSION[surname]"?></p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="kontrol-panel/profilim">Profile</a>
                     <a class="dropdown-item" href="#">Settings</a>
                     <div class="dropdown-divider"></div>
                     <a id="logout-btn" class="dropdown-item" href="javascript:;">Log out</a>

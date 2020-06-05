@@ -27,7 +27,7 @@
 
 
     <!-- SIDEBAR -->
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="sys/vendor/material-dashboard-master/assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="rose" data-background-color="white" data-image="sys/vendor/material-dashboard-master/assets/img/sidebar-1.jpg">
         <? require RUN_LAYOUT__SERVER_DIR . '/sideBar.php' ?>
     </div>
     <!-- /SIDEBAR -->
