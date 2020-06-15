@@ -10,7 +10,7 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end">
         <form class="navbar-form">
-            <div class="input-group no-border">
+            <div class="input-group no-border has-rose">
                 <input type="text" value="" class="form-control" placeholder="Search...">
                 <button type="submit" class="btn btn-white btn-round btn-just-icon">
                     <i class="material-icons">search</i>
