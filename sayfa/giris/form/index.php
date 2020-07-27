@@ -8,4 +8,4 @@ if(!empty($_SESSION)){
     header('Location: ' . BASE__HOST_DIR . '/kontrol-panel/anasayfa');
 }
 
-Run::byLayout();
+Run::byLayout('noMenu');

@@ -9,8 +9,8 @@
             </div>
             <div class="modal-body"></div>
             <div class="modal-footer" style="border-top: 0;">
-                <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">İptal</button>
-                <button id="confirmModalSuccessBtn" class="btn btn-primary confirm" style="min-width: 80px;">Onayla</button>
+                <button type="button" class="btn btn-dark cancel" data-dismiss="modal">İptal</button>
+                <button id="confirmModalSuccessBtn" class="btn btn-rose confirm" style="min-width: 80px;">Onayla</button>
             </div>
         </div>
     </div>

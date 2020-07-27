@@ -1,13 +1,9 @@
 <?php
 
 
-
-
 function prePrint($value){
     echo "<pre>" . print_r($value, 1) . "</pre>";
 }
-
-
 
 
 function preDump($value){
@@ -15,13 +11,9 @@ function preDump($value){
 }
 
 
-
-
 function dir2Url($dir){
     return str_replace('\\', '/', $dir);
 }
-
-
 
 
 function resTrue($msg = null, $code = null, $data = null){
@@ -32,6 +24,8 @@ function resTrue($msg = null, $code = null, $data = null){
         'data'   => $data
     ];
 }
+
+
 function resFalse($msg = null, $code = null, $data = null){
     return [
         'status' => false,
@@ -40,8 +34,6 @@ function resFalse($msg = null, $code = null, $data = null){
         'data'   => $data
     ];
 }
-
-
 
 
 function jsonEchoTrue($msg = null, $code = null, $data = null){
@@ -53,6 +45,8 @@ function jsonEchoTrue($msg = null, $code = null, $data = null){
     ]);
     return true;
 }
+
+
 function jsonEchoFalse($msg = null, $code = null, $data = null){
     echo json_encode([
         'status' => false,
@@ -64,16 +58,34 @@ function jsonEchoFalse($msg = null, $code = null, $data = null){
 }
 
 
+function GET($keys){
+    $GET = new Stack($_GET);
+    return $GET->isGet($keys);
+}
+
+
+function POST($keys){
+    $POST = new Stack($_POST);
+    return $POST->isGet($keys);
+}
 
 
 function GET_PositiveInt($keys, $default = 1){
-    $GET = new Stack($_GET);
-
+    $returnValue = GET($keys);
+    if(!is_numeric($returnValue) || $returnValue <= 0){
+        return $default;
+    }
+    return (int) $returnValue;
 }
+
+
 function POST_PositiveInt($keys, $default = 1){
-
+    $returnValue = POST($keys);
+    if(!is_numeric($returnValue) || $returnValue <= 0){
+        return $default;
+    }
+    return (int) $returnValue;
 }
-
 
 
 function direct($url, $outer = false){
@@ -83,8 +95,6 @@ function direct($url, $outer = false){
         header('Location: ' . $url);
     }
 }
-
-
 
 
 function getConstants(){

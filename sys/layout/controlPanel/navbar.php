@@ -35,7 +35,7 @@
                         Some Actions
                     </p>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <div class="dropdown-menu dropdown-menu-rose dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">Mike John responded to your email</a>
                     <a class="dropdown-item" href="#">You have 5 new tasks</a>
                     <a class="dropdown-item" href="#">You're now friend with Andrew</a>
@@ -49,8 +49,8 @@
                     <span class="d-lg-inline-block d-md-none"><?="$_SESSION[name] $_SESSION[surname]"?></span>
                     <p class="d-lg-none d-md-block"><?="$_SESSION[name] $_SESSION[surname]"?></p>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                    <a class="dropdown-item" href="kontrol-panel/profilim">Profile</a>
+                <div class="dropdown-menu dropdown-menu-rose dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                    <a class="dropdown-item bg-rose" href="kontrol-panel/profilim">Profile</a>
                     <a class="dropdown-item" href="#">Settings</a>
                     <div class="dropdown-divider"></div>
                     <a id="logout-btn" class="dropdown-item" href="javascript:;">Log out</a>

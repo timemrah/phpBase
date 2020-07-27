@@ -13,7 +13,7 @@
                     <div class="col-md-4">
                         <div class="form-group has-rose">
                             <label class="bmd-label-floating">Email Adresi</label>
-                            <input type="email" class="form-control" value="<?=$_SESSION['email']?>">
+                            <input type="email" class="form-control" value="<?=$_SESSION['email']?>" required>
                         </div>
                     </div>
                     <div class="col-md-4">
