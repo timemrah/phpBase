@@ -1,5 +1,13 @@
-<script src="sys/vendor/material-dashboard-master/assets/js/core/jquery.min.js"></script>
-<script src="sys/vendor/bootstrap-4.5.0/js/bootstrap.bundle.min.js"></script>
+<script src="sys/vendor/material-kit-master/assets/js/core/jquery.min.js"></script>
+<script src="sys/vendor/material-kit-master/assets/js/core/popper.min.js"></script>
+<script src="sys/vendor/material-kit-master/assets/js/core/bootstrap-material-design.min.js"></script>
+<script src="sys/vendor/material-kit-master/assets/js/plugins/moment.min.js"></script>
+<script src="sys/vendor/material-kit-master/assets/js/plugins/bootstrap-datetimepicker.js"></script>
+<script src="sys/vendor/material-kit-master/assets/js/material-kit.js"></script>
+
+<? /* <script src="sys/vendor/bootstrap-4.5.0/js/bootstrap.bundle.min.js"></script> */ ?>
+
+
 <script src="sys/js/tools.js"></script>
 <script src="sys/js/ajaxCom.js"></script>
 <script src="sys/js/awAlert.js"></script>

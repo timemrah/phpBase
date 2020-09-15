@@ -3,7 +3,10 @@
     let loginForm = document.getElementById('login-form');
     loginForm.addEventListener('submit', e => {
         e.preventDefault();
-        ajaxCom('POST', loginForm.action, new FormData(loginForm)).then(json => {
+
+        let loginFormData = new FormData(loginForm);
+
+        ajaxCom('POST', loginForm.action, loginFormData).then(json => {
             if(json.status !== true){
                 awAlert.error(json.msg);
                 return false;

@@ -11,7 +11,7 @@
         [   'host'       => 'localhost',
             'user'       => 'root',
             'pass'       => '',
-            'dbname'     => 'basephp',
+            'dbname'     => 'php_base',
             'charset'    => 'utf8',
             'persistent' => false
         ]

@@ -8,3 +8,6 @@
 }
 #search-form .input-group-prepend > .btn:hover{ color: #FFF; background-color: #ced4da; }
 #search-form input{ border-left: 0; padding-left: 3px; }
+
+
+#footer{ position: fixed; bottom: 0; left: 0; width: 100%; }

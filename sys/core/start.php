@@ -1,4 +1,14 @@
 <?php
+
+
+//START PROCESS TIME
+$startTime = microtime(1);
+
+
+//OB START
+ob_start();
+
+
 //---- GLOBAL VARIABLES ------------------------------------------------------------------------------------------------
 $View = [];
 $View['data'] = [];
@@ -8,13 +18,8 @@ $View['call']['css']  = [];
 $View['call']['js']   = [];
 
 
-//START PROCESS TIME RECORD
-$startTime = microtime(1);
+//START PROCESS TIME RECORD TO DATA
 $View['data']['startTime'] = $startTime;
-
-
-//OB START
-ob_start();
 
 
 //---- CREATE DIR & FILE DEFINES ---------------------------------------------------------------------------------------
